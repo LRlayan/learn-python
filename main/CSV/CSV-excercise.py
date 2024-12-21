@@ -33,5 +33,16 @@ def dashboard():
                 }
             )
         field_names = all_employees.pop(0)
+            
+        for employee in all_employees:
+           if int(employee["salary"]) > 57000:
+                    filtered_employee.append(employee)
+        print(filtered_employee)
+        
+        with open("hign-salary-employees.csv","w",newline='') as write_file:
+            csv_writer = csv.DictWriter(write_file,fieldnames=field_names)         
+            csv_writer.writeheader()
+            for row in filtered_employee:
+                csv_writer.writerow(row)
 
 dashboard()   
