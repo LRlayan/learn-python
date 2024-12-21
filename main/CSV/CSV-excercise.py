@@ -17,12 +17,21 @@ file_path ="main\CSV\employe.csv"
 
 all_employees = []
 filtered_employee = []
-filed_names = []
+field_names = []
 
 def dashboard():
     with open(file_path,"r",newline='') as read_file:
         employe_read = csv.reader(read_file)
         for employe in employe_read:
             print(employe)
+            all_employees.append(
+                {
+                    "employeID":employe[0],
+                    "name":employe[1],
+                    "department":employe[2],
+                    "salary":employe[3]
+                }
+            )
+        field_names = all_employees.pop(0)
 
 dashboard()   
