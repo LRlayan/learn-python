@@ -30,4 +30,7 @@ print(np.sqrt(arr_1))
 # summation
 print(np.sum(arr_1))
 
+# mean (Average)
+print(np.mean(arr_1))
+
 
