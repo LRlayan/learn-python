@@ -24,4 +24,7 @@ print(arr_1*arr_2)
 # division
 print(arr_1/arr_2)
 
+# square root
+print(np.sqrt(arr_1))
+
 
