@@ -14,3 +14,6 @@ arr_2 = np.array([20,10,40])
 
 # addition
 print(arr_1+arr_2)
+
+# substraction
+print(arr_1-arr_2)
