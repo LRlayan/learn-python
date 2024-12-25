@@ -33,4 +33,7 @@ print(np.sum(arr_1))
 # mean (Average)
 print(np.mean(arr_1))
 
+# min
+print(np.min(arr_1))
+
 
