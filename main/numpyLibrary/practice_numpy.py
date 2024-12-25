@@ -17,3 +17,6 @@ print(arr_1+arr_2)
 
 # substraction
 print(arr_1-arr_2)
+
+# multiplication
+print(arr_1*arr_2)
