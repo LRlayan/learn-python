@@ -36,4 +36,7 @@ print(np.mean(arr_1))
 # min
 print(np.min(arr_1))
 
+# max
+print(np.max(arr_1))
+
 
