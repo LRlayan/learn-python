@@ -20,3 +20,8 @@ print(arr_1-arr_2)
 
 # multiplication
 print(arr_1*arr_2)
+
+# division
+print(arr_1/arr_2)
+
+
