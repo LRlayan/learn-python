@@ -27,4 +27,7 @@ print(arr_1/arr_2)
 # square root
 print(np.sqrt(arr_1))
 
+# summation
+print(np.sum(arr_1))
+
 
