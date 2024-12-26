@@ -121,3 +121,31 @@ print(initialize_array) # [0 0 0 0 0]
 initialize_array_2 = np.zeros((2,3),dtype=int)
 print(initialize_array_2) # [[0 0 0] [0 0 0]]
 
+# ------------------------
+# full()
+full_array = np.full(3,4)
+print(full_array) # [4,4,4]
+
+full_array_2 = np.full((4,5),3)
+print(full_array_2)
+#  4 = rows
+#  5 = columns
+#  3 = values
+
+# [[3 3 3 3 3]
+#  [3 3 3 3 3]
+#  [3 3 3 3 3]
+#  [3 3 3 3 3]]
+
+list_1 = [10,20]
+full_array_3 = np.full((3,2),list_1)
+print(full_array_3)
+# [[10 20]
+#  [10 20]
+#  [10 20]]
+# you can give only 2 values to list in here because index 2
+
+full_array_4 = np.full((2,3),range(1,4))
+print(full_array_4) # [[1 2 3] [1 2 3]]
+# you can give only range 1 to 4 values in here because index 3
+
