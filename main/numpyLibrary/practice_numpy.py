@@ -84,6 +84,18 @@ print(array_3[0,1]) # [7,8,9]
 print(array_3[1,0]) # [1 2 3]
 
 # -----------------------
+# apply condition to numpy array
+array_4 = np.array([[[1,2,3],[4,5,6]]])
+condition = array_4 > 5
+print(condition) # [[[False False False],[False False True]]]
+relevent_condtion_values = array_4[condition] # the condition is empose to relevent array
+print(relevent_condtion_values) # [6]
+
+# if you give condition to numpy array, it's apply to every element in numpy array
+
+# simplify code
+print(array_4[array_4 > 5])
+
 
 
 
