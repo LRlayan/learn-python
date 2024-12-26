@@ -76,7 +76,14 @@ print(array.ndim) # 1-> 1D array
 array_2 = np.array([[1,2,3],[10,20,30]])
 print(array_2.ndim) # 2-> 2D array
 
+# -----------------------
+# index
+array_3 = np.array([[[4,3,6],[7,8,9]],[[1,2,3],[4,5,6]]])
+print(array_3[0]) # [4,3,6],[7,8,9]
+print(array_3[0,1]) # [7,8,9]
+print(array_3[1,0]) # [1 2 3]
 
+# -----------------------
 
 
 
