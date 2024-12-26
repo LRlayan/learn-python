@@ -80,5 +80,9 @@ print(data_3)
 print(data_3.values) # [[1 3] [2 4]]
 print(type(data_3.values)) # <class 'numpy.ndarray'>
 
+# ---------------------------
+# len
+# This len is the number of rows in a data frame.
+print(len(data_3)) # 2
 
 
