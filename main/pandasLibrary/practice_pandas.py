@@ -44,3 +44,8 @@ data = {
 
 data_frame_2 = pd.DataFrame(data,index=["day1","day2","day3"])
 print(data_frame_2)
+#       calories  duration
+# day1       420        50
+# day2       253        10
+# day3       562        30
+
