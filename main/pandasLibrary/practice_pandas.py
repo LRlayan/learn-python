@@ -33,3 +33,14 @@ print(data_frame.loc[0].Age) # 23
 
 # multiple rows can returns
 print(data_frame.loc[[0,1]])
+
+# ----------------------------
+# how to refactor row index
+
+data = {
+    'calories':[420,253,562],
+    'duration':[50,10,30]
+}
+
+data_frame_2 = pd.DataFrame(data,index=["day1","day2","day3"])
+print(data_frame_2)
