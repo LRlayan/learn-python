@@ -73,3 +73,12 @@ print(list(data_frame_2.columns)) # ['calories', 'duration']
 # This is comming the multiplication in rows and columns
 print(data_frame_2.size) # 6
 
+# ---------------------------
+# values - values purpose is convert dataframe to the numpy array
+data_3 = pd.DataFrame({'A':[1,2],'B':[3,4]})
+print(data_3)
+print(data_3.values) # [[1 3] [2 4]]
+print(type(data_3.values)) # <class 'numpy.ndarray'>
+
+
+
