@@ -95,5 +95,7 @@ data = {
 # ---------------------------
 # mean (Average)
 print(pd.DataFrame(data).mean()) 
+# sum
+print(pd.DataFrame(data).sum())
 
 
