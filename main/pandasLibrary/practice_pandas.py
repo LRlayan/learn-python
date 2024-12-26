@@ -67,3 +67,9 @@ print(data_frame_2.shape) # (3, 2)
 # how to get column names
 print(data_frame_2.columns) # Index(['calories', 'duration'], dtype='object')
 print(list(data_frame_2.columns)) # ['calories', 'duration']
+
+# ---------------------------
+# how to get size in dataframe
+# This is comming the multiplication in rows and columns
+print(data_frame_2.size) # 6
+
