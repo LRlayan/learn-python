@@ -106,6 +106,10 @@ result = array_5[(array_5 > 20) & (array_5 < 80)]
 print(result)
 
 # ------------------------
+# or(|)
+result_1 = array_5[(array_5 > 50) | (array_5 > 100)]
+print(result_1)
 
+# ------------------------
 
 
