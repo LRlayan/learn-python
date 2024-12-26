@@ -11,3 +11,7 @@ WHY USE PANDAS?
 HOW TO INSTALL?
 # command - pip3 install pandas
 
+WHAT IS DATA FRAME?
+# This is a concept used for store data in the pandas library.
+# This is include row ands columns.
+# Columns have different data types.
