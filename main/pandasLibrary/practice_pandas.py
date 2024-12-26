@@ -58,7 +58,7 @@ print(data_frame_2['calories'])
 # day3    562
 
 # ---------------------------
-# shape
+# shape - returns dimension like a tuple in the dataframe
 print(data_frame_2.shape) # (3, 2)
 # 3 -> rows
 # 2 -> columns
