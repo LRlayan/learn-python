@@ -111,5 +111,13 @@ result_1 = array_5[(array_5 > 50) | (array_5 > 100)]
 print(result_1)
 
 # ------------------------
+# zeros()
+# when initialize a array, it's give like a zero values
+# default has float
 
+initialize_array = np.zeros(5,dtype=int)
+print(initialize_array) # [0 0 0 0 0]
+
+initialize_array_2 = np.zeros((2,3),dtype=int)
+print(initialize_array_2) # [[0 0 0] [0 0 0]]
 
