@@ -85,4 +85,15 @@ print(type(data_3.values)) # <class 'numpy.ndarray'>
 # This len is the number of rows in a data frame.
 print(len(data_3)) # 2
 
+# ---------------------------
+
+data = {
+    'age':[10,20,30],
+    'salary':[2500,36000,58000]
+}
+
+# ---------------------------
+# mean (Average)
+print(pd.DataFrame(data).mean()) 
+
 
