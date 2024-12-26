@@ -149,3 +149,14 @@ full_array_4 = np.full((2,3),range(1,4))
 print(full_array_4) # [[1 2 3] [1 2 3]]
 # you can give only range 1 to 4 values in here because index 3
 
+# ------------------------
+# np.empty()
+# it's very performence
+# assing the garbage values after initialize the array
+
+empty_array = np.empty((2,3))
+print(empty_array)
+
+empty_array_2 = np.empty(5)
+print(empty_array_2)
+
