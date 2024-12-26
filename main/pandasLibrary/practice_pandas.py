@@ -11,3 +11,5 @@ print(data)
     # name  age
 # 0  Alice   23
 # 1   John   28
+# 0,1 is the normal default index for identifying rows, you can change this index if you want. 
+
