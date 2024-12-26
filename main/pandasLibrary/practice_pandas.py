@@ -56,3 +56,9 @@ print(data_frame_2['calories'])
 # day1    420
 # day2    253
 # day3    562
+
+# ---------------------------
+# shape
+print(data_frame_2.shape) # (3, 2)
+# 3 -> rows
+# 2 -> columns
