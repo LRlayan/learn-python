@@ -57,7 +57,16 @@ print(arr_4.shape) # (2, 2, 3)
 # 2 -> the 2D array has two 1D arrays
 # 3 -> the 1D array has 3 elements
 
+# -----------------------
+
 # shape attribute
 #   > This property returns the dimension as a tuple in an array.
+
+# -----------------------
+# dtype
+array = np.array([10,20,30])
+print(array.dtype) #int64
+# the result varies depending on the bit of computer
+
 
 
