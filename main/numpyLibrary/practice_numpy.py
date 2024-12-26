@@ -68,5 +68,15 @@ array = np.array([10,20,30])
 print(array.dtype) #int64
 # the result varies depending on the bit of computer
 
+# -----------------------
+# ndim
+array = np.array([10,20,30])
+print(array.ndim) # 1-> 1D array
+
+array_2 = np.array([[1,2,3],[10,20,30]])
+print(array_2.ndim) # 2-> 2D array
+
+
+
 
 
