@@ -49,3 +49,10 @@ print(data_frame_2)
 # day2       253        10
 # day3       562        30
 
+# ----------------------------
+# how to get data in columns
+# it is possible get all the data in the column
+print(data_frame_2['calories'])
+# day1    420
+# day2    253
+# day3    562
