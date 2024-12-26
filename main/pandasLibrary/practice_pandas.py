@@ -97,5 +97,15 @@ data = {
 print(pd.DataFrame(data).mean()) 
 # sum
 print(pd.DataFrame(data).sum())
-
+# describe - we are given statistical parameters about the relevent data set
+print(pd.DataFrame(data).describe())
+#         age        salary
+# count   3.0      3.000000
+# mean   20.0  32166.666667
+# std    10.0  27947.868136
+# min    10.0   2500.000000
+# 25%    15.0  19250.000000
+# 50%    20.0  36000.000000
+# 75%    25.0  47000.000000
+# max    30.0  58000.000000
 
