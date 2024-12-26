@@ -96,6 +96,16 @@ print(relevent_condtion_values) # [6]
 # simplify code
 print(array_4[array_4 > 5])
 
+# ------------------------
+
+array_5 = np.array([10,20,30,40,50,60,70,80,90,100])
+
+# ------------------------
+# and(&)
+result = array_5[(array_5 > 20) & (array_5 < 80)]
+print(result)
+
+# ------------------------
 
 
 
