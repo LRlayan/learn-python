@@ -109,3 +109,15 @@ print(pd.DataFrame(data).describe())
 # 75%    25.0  47000.000000
 # max    30.0  58000.000000
 
+# ---------------------------
+data = {
+    'Name':["Alice","Bob","charlie","David"],
+    'Age':[24,27,22,32],
+    'score':[85,70,90,88]
+}
+
+data_frame_3 = pd.DataFrame(data)
+
+# filter data
+filtered_age = data_frame_3[data_frame_3['Age'] > 25]
+print(filtered_age)
