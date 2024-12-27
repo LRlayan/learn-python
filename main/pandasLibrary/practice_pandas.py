@@ -121,3 +121,8 @@ data_frame_3 = pd.DataFrame(data)
 # filter data
 filtered_age = data_frame_3[data_frame_3['Age'] > 25]
 print(filtered_age)
+
+# ----------------------------
+# how to add new row in data frame
+data_frame_3.loc[len(data_frame_3)] = ['ramesh',23,85]
+print(data_frame_3)
