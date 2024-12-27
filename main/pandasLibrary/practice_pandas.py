@@ -137,3 +137,8 @@ print(new_data_frame_1)
 # remove row in data frame
 new_data_frame_2 = data_frame_3.drop(4,axis=0,inplace=False)
 print(new_data_frame_2)
+
+# ---------------------------
+# read csv file
+customer_csv_file = pd.read_csv("main\pandasLibrary\customers-100.csv")
+print(customer_csv_file)
