@@ -142,3 +142,8 @@ print(new_data_frame_2)
 # read csv file
 customer_csv_file = pd.read_csv("main\pandasLibrary\customers-100.csv")
 print(customer_csv_file)
+
+# ---------------------------
+# read json file
+read_json_file = pd.read_json("main\pandasLibrary\example_1.json")
+print(read_json_file)
