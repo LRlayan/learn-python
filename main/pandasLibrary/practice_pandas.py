@@ -126,3 +126,12 @@ print(filtered_age)
 # how to add new row in data frame
 data_frame_3.loc[len(data_frame_3)] = ['ramesh',23,85]
 print(data_frame_3)
+
+# ----------------------------
+#  how to drop column and row
+# drop()
+# remove column in data frame
+new_data_frame_1 = data_frame_3.drop('Age',axis=1,inplace=False)
+print(new_data_frame_1)
+
+
