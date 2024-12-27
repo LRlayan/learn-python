@@ -134,4 +134,6 @@ print(data_frame_3)
 new_data_frame_1 = data_frame_3.drop('Age',axis=1,inplace=False)
 print(new_data_frame_1)
 
-
+# remove row in data frame
+new_data_frame_2 = data_frame_3.drop(4,axis=0,inplace=False)
+print(new_data_frame_2)
