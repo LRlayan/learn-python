@@ -42,13 +42,11 @@ print(get_five_first_employee) # answer (a)
 # answer (b)
 def salary():
     reader = read_employee_date()
-    mean = reader['Salary'].mean()
-    median = reader['Salary'].median()
-    deviation = reader['Salary'].std()
-    
-    print("Mean of salary:" , mean)
-    print("median of salary:" , median)
-    print("deviation of salary:" , deviation)
+    salaries = reader['Salary']
+    print("Mean of salary : " ,np.mean(salaries))
+    print("Median of salary" ,np.median(salaries))
+    print("Deviation of salary" ,np.std(salaries, ddof=1))
+
     
 salary()
 
