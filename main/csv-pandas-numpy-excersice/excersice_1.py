@@ -51,4 +51,7 @@ def salary():
     print("deviation of salary:" , deviation)
     
 salary()
-    
+
+# answer (c)
+number_of_years_employee_experiance = employe_data[employe_data["ExperienceYears"] > 10]
+print("Number_Of_Years Employee Experiance",number_of_years_employee_experiance)
