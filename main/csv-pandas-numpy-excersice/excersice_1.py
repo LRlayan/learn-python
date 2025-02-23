@@ -26,13 +26,29 @@
 
 # answer (a)
 import pandas as pd
+import numpy as np
 
 file_path = "main\csv-pandas-numpy-excersice\employee_data.csv"
 
-def read_five_row():
+def read_employee_date():
     with open(file_path, "r", newline='') as file:
         reader = pd.read_csv(file)
-        read_first_five_data = reader.head()
-        print("Read five employee data : ",read_first_five_data)
+        return reader
         
-read_five_row()
+employe_data = read_employee_date()
+get_five_first_employee = employe_data.head()
+print(get_five_first_employee) # answer (a)
+
+# answer (b)
+def salary():
+    reader = read_employee_date()
+    mean = reader['Salary'].mean()
+    median = reader['Salary'].median()
+    deviation = reader['Salary'].std()
+    
+    print("Mean of salary:" , mean)
+    print("median of salary:" , median)
+    print("deviation of salary:" , deviation)
+    
+salary()
+    
