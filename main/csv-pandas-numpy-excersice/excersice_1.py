@@ -59,3 +59,10 @@ df = pd.DataFrame(employe_data)
 data = df.sort_values(by="Salary", ascending=False)
 heighest_five_salary = data.head()
 print("\nHeighest Five Salary\n",heighest_five_salary)
+
+# answer (e)
+df = pd.DataFrame(employe_data)
+above_50_age = df[df['Age'] > 50]
+precentage = len(above_50_age)/len(employe_data)*100
+print("\nPrecentage of employe above 50 age : ", precentage)
+
