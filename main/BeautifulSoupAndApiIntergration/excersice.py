@@ -60,3 +60,27 @@ def extract_data():
         print(e)
 
 extract_data()
+
+        
+# answer (c)
+
+base_url_api = "https://api.example.com/market"
+
+def stock_manage():
+    
+    try:
+        response = req.get(base_url)
+        response.raise_for_status() # Riase an error for http failures
+    
+        stock_data = response.json()
+        
+        for data in stock_data:
+            print(f"company name : {data["company"]}")
+            print(f"Ticker : {data["ticker"]}")
+            print(f"Price : {data["price"]:2f}")
+            print("-" * 30)
+            
+    except req.exceptions.RequestException as e:
+        print(e)
+        
+stock_manage()
