@@ -43,7 +43,7 @@ print(get_five_first_employee) # answer (a)
 def salary():
     reader = read_employee_date()
     salaries = reader['Salary']
-    print("Mean of salary : " ,np.mean(salaries))
+    print("\nMean of salary : " ,np.mean(salaries))
     print("Median of salary" ,np.median(salaries))
     print("Deviation of salary" ,np.std(salaries, ddof=1))
 
@@ -52,4 +52,10 @@ salary()
 
 # answer (c)
 number_of_years_employee_experiance = employe_data[employe_data["ExperienceYears"] > 10]
-print("Number_Of_Years Employee Experiance",number_of_years_employee_experiance)
+print("\nNumber_Of_Years Employee Experiance\n",number_of_years_employee_experiance)
+
+# answer (d)
+df = pd.DataFrame(employe_data)
+data = df.sort_values(by="Salary", ascending=False)
+heighest_five_salary = data.head()
+print("\nHeighest Five Salary\n",heighest_five_salary)
