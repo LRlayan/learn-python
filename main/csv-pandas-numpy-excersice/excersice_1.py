@@ -19,12 +19,11 @@
 # • If ExperienceYears ≥ 15, classify as "Senior"
 # • If ExperienceYears between 5 and 14, classify as "Mid-Level"
 # • Otherwise, classify as "Junior"
-
 # (g) Sort the dataset by ExperienceLevel (Senior first) and then by Salary in descending order.
+
 # Your solution should demonstrate proper use of NumPy, Pandas, and file handling in Python while ensuring 
 # efficient and optimized code.
-
-# answer (a)
+# 
 import pandas as pd
 import numpy as np
 
@@ -34,10 +33,11 @@ def read_employee_date():
     with open(file_path, "r", newline='') as file:
         reader = pd.read_csv(file)
         return reader
-        
+
+# answer (a)
 employe_data = read_employee_date()
 get_five_first_employee = employe_data.head()
-print(get_five_first_employee) # answer (a)
+print(get_five_first_employee) 
 
 # answer (b)
 def salary():
@@ -66,3 +66,26 @@ above_50_age = df[df['Age'] > 50]
 precentage = len(above_50_age)/len(employe_data)*100
 print("\nPrecentage of employe above 50 age : ", precentage)
 
+# answer (f)
+df = pd.DataFrame(employe_data)
+
+df["ExperienceLevel"] = np.where(df["ExperienceYears"] >= 15, "Senior",
+                        np.where((df["ExperienceYears"] > 5) & (df["ExperienceYears"] < 14), 
+                        "Mid-Level", "Junior"))
+
+print("\n Adding Experience Level \n",df)
+
+# answer (g)
+df = pd.DataFrame(employe_data)
+
+df["ExperienceLevel"] = np.select(
+    [df["ExperienceYears"] >= 15, (df["ExperienceYears"] > 5) & (df["ExperienceYears"] < 14)],
+    ["Senior", "Mid-Level"],
+    default="Junior"
+)
+
+experience_order = {"Senior","Mid-Level","Junior"}
+df["ExperienceLevel"] = pd.Categorical(df["ExperienceLevel"], categories=experience_order, ordered=True)
+
+df_sort = df.sort_values(by=["ExperienceLevel","Salary"], ascending=[True,False])
+print(df_sort)
