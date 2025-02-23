@@ -53,5 +53,17 @@ class Librarian(Person):
         super().display_info()
         print(f"Employee ID : {self.employee_id}")
         
+class Member(Person):
+    def __init__(self,name,age,membership_id):
+        super().__init__(name,age)
+        self.membership_id = membership_id
+        
+    def display_info(self):
+        super().display_info()
+        print(f"Membership Id : {self.membership_id}")
+        
 librarian = Librarian("Ramesh",24,"E001")
 librarian.display_info()
+
+member = Member("Layan",25,"M001")
+member.display_info()
