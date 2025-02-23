@@ -44,3 +44,14 @@ class Person:
     def display_info(self):
         print(f"Name: {self.name}\nAge: {self.age}")
         
+class Librarian(Person):
+    def __init__(self, name, age, employee_id):
+        super().__init__(name,age)
+        self.employee_id = employee_id
+        
+    def display_info(self):
+        super().display_info()
+        print(f"Employee ID : {self.employee_id}")
+        
+librarian = Librarian("Ramesh",24,"E001")
+librarian.display_info()
