@@ -51,7 +51,7 @@ class Librarian(Person):
         
     def display_info(self):
         super().display_info()
-        print(f"Employee ID : {self.employee_id}")
+        print(f"Employee ID : {self.employee_id}\n")
         
 class Member(Person):
     def __init__(self,name,age,membership_id):
@@ -60,7 +60,7 @@ class Member(Person):
         
     def display_info(self):
         super().display_info()
-        print(f"Membership Id : {self.membership_id}")
+        print(f"Membership Id : {self.membership_id}\n")
         
 class Library:
     def __init__(self):
@@ -72,11 +72,11 @@ class Library:
             self.__books[title] += copies
         else:
             self.__books[title] = copies
-        print(f"Added {title} Book with {copies} Copies.")
+        print(f"Added {title} Book with {copies} Copies.\n")
         
     def register(self,member):
         self.__members.append(member)
-        print(f"{member.name} Member is Registered")
+        print(f"{member.name} Member is Registered\n")
         
     def lend_book(self,title,member):
         if title in self.__books and self.__books[title] > 0:
@@ -108,12 +108,15 @@ library = Library()
 
 library.add_book("Python",5)
 library.add_book("Java",10)
+library.add_book("React",15)
  
 member_2 = Member("Raj",60,"M002")
 library.register(member_1)
 library.register(member_2)
 
 library.lend_book("Java",member_1)
+library.lend_book("React",member_2)
+library.lend_book("Python",member_1)
 
 library.display_available_books()
 library.display_all_members()
