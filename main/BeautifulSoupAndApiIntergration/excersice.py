@@ -1,5 +1,10 @@
-# In financial market analysis, retrieving stock price data is essential for making informed investment decisions. There are two common approaches for obtaining such data: web scraping and API integration. Web scraping involves fetching and processing HTML content from financial websites, while APIs provide structured data access from official stock market services. Python offers libraries such as requests, and BeautifulSoup to streamline these tasks.
-# Assume you are developing a financial data retrieval system that collects real-time stock market data from an online finance portal. The stock market platform offers data through two methods:
+# In financial market analysis, retrieving stock price data is essential for making informed investment decisions. There are two common 
+# approaches for obtaining such data: web scraping and API integration. Web scraping involves fetching and processing HTML content from 
+# financial websites, while APIs provide structured data access from official stock market services. Python offers libraries such as requests, 
+# and BeautifulSoup to streamline these tasks.
+
+# Assume you are developing a financial data retrieval system that collects real-time stock market data from an online finance portal. The 
+# stock market platform offers data through two methods:
 # 1. A web page containing stock details within its HTML structure.
 # 2. A REST API that returns stock market data in JSON format.
 
@@ -11,8 +16,8 @@
         #   ‹span class="current-price">$695-50</span>
         # </div>
 # Write a Python program using requests and BeautifulSoup. to:
-# • retrive the web page content from htts://example. com/market
-# • Extract the company name, stock ticker. and price.
+# • retrive the web page content from htts://example.com/market
+# • Extract the company name, stock ticker. and price.l
 
 # (b) Error Handling in Web Scraping
 # Since web scraping is susceptible to network failures, website updates, or anti-scraping measures, enhance your script by:
