@@ -83,8 +83,13 @@ class Library:
             self.__books[title] -= 1
             print(f"{title} book lead to {member.name}.")
         else:
-            print(f"Sorry, not available {title} book")        
-        
+            print(f"Sorry, not available {title} book")    
+            
+    def display_available_books(self):
+        for title,copies in self.__books.items():
+            print("\nAvailable Books")
+            print(f"Book Title : {title} \nCopies : {copies}")
+    
     
 
 librarian = Librarian("Ramesh",24,"E001")
@@ -103,3 +108,5 @@ library.register(member_1)
 library.register(member_2)
 
 library.lend_book("Java",member_1)
+
+library.display_available_books()
