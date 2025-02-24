@@ -55,37 +55,37 @@ number_of_years_employee_experiance = employe_data[employe_data["ExperienceYears
 print("\nNumber_Of_Years Employee Experiance\n",number_of_years_employee_experiance)
 
 # answer (d)
-df = pd.DataFrame(employe_data)
-data = df.sort_values(by="Salary", ascending=False)
+df_d = pd.DataFrame(employe_data)
+data = df_d.sort_values(by="Salary", ascending=False)
 heighest_five_salary = data.head()
 print("\nHeighest Five Salary\n",heighest_five_salary)
 
 # answer (e)
-df = pd.DataFrame(employe_data)
-above_50_age = df[df['Age'] > 50]
+df_e = pd.DataFrame(employe_data)
+above_50_age = df_e[df_e['Age'] > 50]
 precentage = len(above_50_age)/len(employe_data)*100
 print("\nPrecentage of employe above 50 age : ", precentage)
 
 # answer (f)
-df = pd.DataFrame(employe_data)
+df_f = pd.DataFrame(employe_data)
 
-df["ExperienceLevel"] = np.where(df["ExperienceYears"] >= 15, "Senior",
-                        np.where((df["ExperienceYears"] > 5) & (df["ExperienceYears"] < 14), 
+df_f["ExperienceLevel"] = np.where(df_f["ExperienceYears"] >= 15, "Senior",
+                        np.where((df_f["ExperienceYears"] > 5) & (df_f["ExperienceYears"] < 14), 
                         "Mid-Level", "Junior"))
 
-print("\n Adding Experience Level \n",df)
+print("\n Adding Experience Level \n",df_f)
 
 # answer (g)
-df = pd.DataFrame(employe_data)
+# df = pd.DataFrame(employe_data)
 
-df["ExperienceLevel"] = np.select(
-    [df["ExperienceYears"] >= 15, (df["ExperienceYears"] > 5) & (df["ExperienceYears"] < 14)],
-    ["Senior", "Mid-Level"],
-    default="Junior"
-)
+# df["ExperienceLevel"] = np.select(
+#     [df["ExperienceYears"] >= 15, (df["ExperienceYears"] > 5) & (df["ExperienceYears"] < 14)],
+#     ["Senior", "Mid-Level"],
+#     default="Junior"
+# )
 
 experience_order = {"Senior","Mid-Level","Junior"}
-df["ExperienceLevel"] = pd.Categorical(df["ExperienceLevel"], categories=experience_order, ordered=True)
+df_f["ExperienceLevel"] = pd.Categorical(df_f["ExperienceLevel"], categories=experience_order, ordered=True)
 
-df_sort = df.sort_values(by=["ExperienceLevel","Salary"], ascending=[True,False])
-print(df_sort)
+df_sort = df_f.sort_values(by=["ExperienceLevel","Salary"], ascending=[True,False])
+print("\n",df_sort)
