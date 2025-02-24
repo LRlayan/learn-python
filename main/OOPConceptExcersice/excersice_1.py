@@ -16,8 +16,8 @@
 # • Override display _info to include the membership_id
 # 
 # 4. Library (Encapsulated Class)
-# • Private Attribute: _books (dictionary storing book titles as keys and available copies as values)
-# • Private Attribute: _members (list to store Member objects)
+# • Private Attribute: __books (dictionary storing book titles as keys and available copies as values)
+# • Private Attribute: __members (list to store Member objects)
 # • Methods:
 # • add_book(title: str, copies: int) - Adds a book and its available copies
 # • register_member(member: Member) - Adds a member to the_members list
@@ -62,8 +62,35 @@ class Member(Person):
         super().display_info()
         print(f"Membership Id : {self.membership_id}")
         
+class Library:
+    def __init__(self):
+        self.__books = {}
+        self.__members = []
+        
+    def add_book(self,title,copies):
+        if title in self.__books:
+            self.__books[title] += copies
+        else:
+            self.__books[title] = copies
+        print(f"Added {title} Book with {copies} Copies.")
+        
+    def register(self,member):
+        self.__members.append(member)
+        print(f"{member.name} Member is Registered")
+        
+    
+
 librarian = Librarian("Ramesh",24,"E001")
 librarian.display_info()
 
-member = Member("Layan",25,"M001")
-member.display_info()
+member_1 = Member("Layan",25,"M001")
+member_1.display_info()
+
+library = Library()
+
+library.add_book("Python",5)
+library.add_book("Java",10)
+ 
+member_2 = Member("Raj",60,"M002")
+library.register(member_1)
+library.register(member_2)
