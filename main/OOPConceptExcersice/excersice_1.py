@@ -86,10 +86,16 @@ class Library:
             print(f"Sorry, not available {title} book")    
             
     def display_available_books(self):
+        print("\nAvailable Books")
         for title,copies in self.__books.items():
-            print("\nAvailable Books")
             print(f"Book Title : {title} \nCopies : {copies}")
+            print("-"*20)
     
+    def display_all_members(self):
+        print("\nAll Registered Members")
+        for member in self.__members:
+            member.display_info()
+            print("-"*20)
     
 
 librarian = Librarian("Ramesh",24,"E001")
@@ -110,3 +116,4 @@ library.register(member_2)
 library.lend_book("Java",member_1)
 
 library.display_available_books()
+library.display_all_members()
