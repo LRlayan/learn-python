@@ -78,6 +78,13 @@ class Library:
         self.__members.append(member)
         print(f"{member.name} Member is Registered")
         
+    def lend_book(self,title,member):
+        if title in self.__books and self.__books[title] > 0:
+            self.__books[title] -= 1
+            print(f"{title} book lead to {member.name}.")
+        else:
+            print(f"Sorry, not available {title} book")        
+        
     
 
 librarian = Librarian("Ramesh",24,"E001")
@@ -94,3 +101,5 @@ library.add_book("Java",10)
 member_2 = Member("Raj",60,"M002")
 library.register(member_1)
 library.register(member_2)
+
+library.lend_book("Java",member_1)
